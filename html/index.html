@@ -3,110 +3,122 @@
 <!DOCTYPE html>
 
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Complete Responsive zoo website</title>
+        <!-- font awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Responsive zoo website</title>
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+        />
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <a href="#" class="logo"> <i class="fas fa-paw"></i> zoo</a>
 
-    <link rel="stylesheet" href="../css/style.css">    
-</head>
-     <!-- header -->
+            <nav>
+                <a href="index.html">home</a>
+                <a href="animals.html">animal</a>
+                <a href="contact.html">contact</a>
+            </nav>
 
-     <header class="header">
-
-        <a href="#" class="logo"> <i class="fas fa-paw"></i> zoo</a>
-
-        <nav class="navbar">
-            <a href="index.html">home</a>
-            <a href="animals.html">animal</a>
-            <a href="contact.html">contact</a>
-        </nav>
-
-        <div class="icons">
-            <div id="login-form" class="fas fa-user"></div>
-        </div>
-
-    <!-- login form -->
-
-    <form action="" class="login-form">
-
-        <h3>login form</h3>
-        
-        <input type="email" placeholder="Enter your email" class="box">
-        <input type="password" placeholder="Enter your password" class="box">
-        <div class="remember">
-            <input type="checkbox" name="" id="remember-me">
-            <label for="remember-me">remember me</label>
-        </div>
-        <a href="#" class="btn">login</a>
-
-    </form>
-
-    </header>
-
-    <section class="home" id="home">
-
-        <div class="content">
-            <h3>enjoy the wonderful <br>
-            adventure of the <br> animals</h3>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" class="btn">meet the zoo</a>
-        </div>
-
-        <img src="../media/bottom_wave.png" alt="" class="wave">
-
-    </section>
-
-     <!-- about -->
-
-     <section class="about" id="about">
-
-        <h2 class="deco-title">About us</h2>
-
-        <div class="box-container">
-
-            <div class="image">
-                <img src="../media/about.png" alt="">
+            <div class="icons">
+                <a href="#login-form" class="fas fa-user"></a>
             </div>
 
+            <div id="login-form" class="login-form">
+                <form action="">
+                    <h3>login form</h3>
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        class="box"
+                    />
+                    <input
+                        type="password"
+                        placeholder="Enter your password"
+                        class="box"
+                    />
+                    <div class="remember">
+                        <input type="checkbox" name="" id="remember-me" />
+                        <label for="remember-me">remember me</label>
+                    </div>
+                    <input type="submit" value="login" class="btn" />
+                    <a href="#" class="close-btn">&times;</a>
+                </form>
+            </div>
+        </header>
+
+        <section class="home" id="home">
             <div class="content">
-                <h3 class="title">you can find all the most popular species</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Nesciunt temporibus ipsum consectetur asperiores modi ratione. 
-                    Sit, dolores voluptas consequuntur dolor tempore quibusdam est 
-                    obcaecati possimus omnis, officiis molestias et sapiente.</p>
-                
-                <div class="icons-container">
-                    <div class="icons">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h3>we educate</h3>
-                    </div>
-                    <div class="icons">
-                        <i class="fas fa-bullhorn"></i>
-                        <h3>we play</h3>
-                    </div>
-                    <div class="icons">
-                        <i class="fas fa-book-open"></i>
-                        <h3>getting to know</h3>
+                <h3>
+                    enjoy the wonderful <br />
+                    adventure of the <br />
+                    animals
+                </h3>
+                <a
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                    class="btn"
+                    >meet the zoo</a
+                >
+            </div>
+
+            <img src="../media/bottom_wave.png" alt="" class="wave" />
+        </section>
+
+        <!-- about -->
+
+        <section class="about" id="about">
+            <h2 class="deco-title">About us</h2>
+
+            <div class="box-container">
+                <div class="image">
+                    <img src="../media/about.png" alt="" />
+                </div>
+
+                <div class="content">
+                    <h3 class="title">
+                        you can find all the most popular species
+                    </h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Nesciunt temporibus ipsum consectetur asperiores
+                        modi ratione. Sit, dolores voluptas consequuntur dolor
+                        tempore quibusdam est obcaecati possimus omnis, officiis
+                        molestias et sapiente.
+                    </p>
+
+                    <div class="icons-container">
+                        <div class="icons">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>we educate</h3>
+                        </div>
+                        <div class="icons">
+                            <i class="fas fa-bullhorn"></i>
+                            <h3>we play</h3>
+                        </div>
+                        <div class="icons">
+                            <i class="fas fa-book-open"></i>
+                            <h3>getting to know</h3>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-        </div>
-
-    </section>
-
-
-
-    <!-- Footer -->
-    <footer class="blue darken-4 white-text center-align ">
-        <h3>&copy; 2024 Zoo Website. Yair and Sapir.</h3>
-    </footer>
-    
-
+        <!-- Footer -->
+        <footer class="blue darken-4 white-text center-align">
+            <h3>&copy; 2024 Zoo Website. Yair and Sapir.</h3>
+        </footer>
+    </body>
 </html>
