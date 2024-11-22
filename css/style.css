@@ -1,92 +1,267 @@
-/* Reset some default browser styles */
-body, h1, h2, p, ul, li {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/* css/style.css */
+:root {
+    --main: #ff6e01;
+    --footer: #965625b7;
+    --bg: #ffffff;
+    --black: #000;
+    --white: #fff;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
     margin: 0;
     padding: 0;
-    list-style: none;
-}
-
-/* General body styling */
-body {
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-}
-
-/* Header section */
-header {
-    background-color: #3D5300;
-    color: #fff;
-    padding: 15px 0;
-    text-align: center;
-    border-bottom: 5px solid #F09319;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-/* Navigation bar */
-nav {
-    background-color: #3D5300;
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s;
+    outline: none;
+    border: none;
+    transition: .2s linear;
 }
 
-nav ul li a:hover {
-    color: #F09319;
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
 }
 
-/* Main content section */
-main {
-    padding: 20px;
+body {
+    background: var(--bg);
 }
 
-section {
-    margin-bottom: 20px;
-}
-
-section h2 {
-    font-size: 1.8rem;
-    color: #3D5300;
-    margin-bottom: 10px;
-}
-
-section p {
-    font-size: 1rem;
-    line-height: 1.8;
-}
-
-/* the footer is in dark blue coller and connects to the bottom of the screen */
-footer {
-    background-color: #3D5300;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    /* the footer extends to both sides of the screen */
+/* Header Styles */
+.header {
+    position: sticky;
+    top: 0;
     left: 0;
     right: 0;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
 }
+
+.header .logo {
+    font-size: 2.5rem;
+    color: var(--black);
+    font-weight: bold;
+}
+
+.header .logo i {
+    color: var(--main);
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover,
+.header .navbar a.active {
+    color: var(--main);
+}
+
+/* login form */
+
+.header .login-form{
+  position: absolute;
+  top: 115%;
+  right: -105%;
+  background: var(--white);
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  width: 35rem;
+  padding: 2rem;
+}
+
+.header .login-form.active{
+  right: 2rem;
+  transition: .4s linear;
+}
+
+.header .login-form h3{
+  font-size: 2.2rem;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: .7rem;
+  text-align: center;
+}
+
+.header .login-form .box{
+  font-size: 1.5rem;
+  padding: 1rem 1.2rem;
+  border: .1rem solid rgba(0, 0, 0, 0.1);
+  margin: .7rem 0;
+  color: var(--black);
+  width: 100%;
+  text-transform: none;
+}
+
+.header .login-form .remember{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: .7rem 0;
+}
+
+.header .login-form .remember label{
+  font-size: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.header .login-form .btn{
+  width: 100%;
+  text-align: center;
+}
+
+/* Hidden checkbox for mobile menu toggle */
+#menu-toggle {
+    display: none;
+}
+
+/* Footer Styles */
+footer {
+    background: var(--footer);
+    padding: 2rem 9%;
+    margin-top: 2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+footer .box-container .box h3 {
+    font-size: 2.2rem;
+    color: var(--white);
+    padding: 1rem 0;
+}
+
+footer .box-container .box a {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--white);
+    padding: 1rem 0;
+}
+
+footer .box-container .box a i {
+    color: var(--white);
+    padding-right: .5rem;
+}
+
+footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+footer .credit {
+    text-align: center;
+    padding: 2rem;
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+    border-top: .1rem solid var(--white);
+    font-size: 2rem;
+    color: var(--white);
+}
+
+footer .credit span {
+    color: var(--black);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 1.5rem 2rem;
+    }
+    .footer {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-toggle:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        border-top: var(--box-shadow);
+        border-bottom: var(--box-shadow);
+        padding: 1rem 0;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar a {
+        display: block;
+        margin: 1rem 2rem;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
+/* add syling to the home page */
+.home{
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background: url(../media/home.jpg) no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+  
+  .home .content{
+    max-width: 60rem;
+  }
+  
+  .home .content h3{
+    color: var(--white);
+    font-size: 6rem;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+  
+  .home .wave{
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 12rem;
+  }
+
+   /* botton on the main screen */
+ 
+   .home .btn{
+        display: inline-block;
+        padding: 1rem 3rem;
+        font-size: 1.7rem;
+        color: var(--white);
+        background: var(--main);
+        cursor: pointer;
+        text-transform: capitalize;
+        border-radius: .5rem;
+        margin-top: 2rem;
+    }
