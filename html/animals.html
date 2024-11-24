@@ -4,6 +4,7 @@
 
 <html lang="en">
 
+<body>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="../css/style.css">    
+    <link rel="stylesheet" href="../css/animals.css">
 </head>
      <!-- header -->
 
@@ -50,13 +52,63 @@
 
     </header>
 
-    <body>
-        <div>this is the animals page</div>
-    </body>
+ <!-- Animals Section with Sliding Window -->
+<section class="animals-section">
+    <h1 class="heading">Our Animals</h1>
+    
+    <div id="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2" checked>
+        <input type="radio" name="slider" id="slide3" checked>
+        <input type="radio" name="slider" id="slide4" checked>
+        <div id="slides">
+           <div id="overflow">
+              <div class="inner">
+                 <div class="slide slide_1">
+                    <div class="slide-content">
+                        <img src="../media/gallery-1.jpg" alt="Giraffe">
+                    </div>
+                 </div>
+                 <div class="slide slide_2">
+                    <div class="slide-content">
+                        <img src="../media/gallery-2.jpg" alt="Giraffe">
+                    </div>
+                 </div>
+                 <div class="slide slide_3">
+                    <div class="slide-content">
+                        <img src="../media/gallery-3.jpg" alt="Giraffe">
+                    </div>
+                 </div>
+                 <div class="slide slide_4">
+                    <div class="slide-content">
+                        <img src="../media/gallery-4.jpg" alt="Giraffe">
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div id="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+        </div>
+        
+        <div id="bullets">
+           <label for="slide1" ></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+     </div>
+</section>
+
+   
 
     <!-- Footer -->
     <footer class="blue darken-4 white-text center-align ">
         <h3>&copy; 2024 Zoo Website. Yair and Sapir.</h3>
     </footer>
+</body>
 
 </html>
