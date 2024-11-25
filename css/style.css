@@ -84,6 +84,7 @@ header nav {
     gap: 1rem;
 }
 
+/* css for the login form */
 header .login-form {
     position: fixed;
     top: 7rem;
