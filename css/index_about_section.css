@@ -1,0 +1,99 @@
+/* General Section Styling */
+.about {
+    padding: 4rem 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .box-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+/* Image Styling */
+.about .image {
+    flex: 1 1 40%; /* Adjusts to 40% of the width */
+    display: flex;
+    justify-content: center;
+}
+
+.about .image img {
+    width: 100%; /* Ensures responsiveness */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 2rem; /* Adds rounded corners */
+}
+
+/* Content Styling */
+.about .content {
+    flex: 1 1 50%; /* Takes up 50% of the width */
+}
+
+.about .content .title {
+    font-size: 3rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.about .content p {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    color: #555;
+    margin-bottom: 3rem;
+}
+
+/* Icons Container */
+.about .icons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Responsive grid */
+    gap: 2rem;
+}
+
+/* Icons Box Styling */
+.about .icons {
+    text-align: center;
+    background: var(--footer); /* Footer color variable */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about .icons i {
+    font-size: 3rem;
+    color: var(--main); /* Highlighted main color */
+    margin-bottom: 1rem;
+}
+
+.about .icons h3 {
+    font-size: 1.8rem;
+    color: var(--white); /* Icon text color */
+}
+
+.about .icons:hover {
+    transform: translateY(-1rem); /* Hover effect */
+    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.2);
+    /* cursor: pointer; */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about .box-container {
+        flex-direction: column; /* Stacks elements vertically */
+    }
+
+    .about .content {
+        text-align: center; /* Centers text for smaller screens */
+    }
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}

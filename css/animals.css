@@ -1,5 +1,5 @@
 /* General Section Styling */
-section {
+section  {
     padding: 40px 0;
     background-color: #ffebe0;
     text-align: center;
@@ -30,15 +30,7 @@ section {
     cursor: pointer;
     text-decoration: none;
 }
-/* 
-#slides {
-    padding;
-    border: 1px solid #ccc;
-    background: #fff;
-    position: relative;
-    z-index: 1;
-    border-radius: 10px;
-} */
+
 
 #overflow {
     width: 100%;
@@ -87,14 +79,8 @@ section {
     max-width: 300%; /* Prevents image from getting too big */
     max-height: 100%; /* Prevents image from getting too big */
     border-radius: 10px;
+    
 }
-
-/* #slides .slide_1,
-#slides .slide_2,
-#slides .slide_3,
-#slides .slide_4 {
-    background: #abe3f9;
-} */
 
 /* Controls positioning and visibility fixes */
 #controls {
