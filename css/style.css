@@ -68,7 +68,7 @@ header .logo i {
 }
 
 header nav a {
-    margin: 0 1rem;
+    margin: 0 2rem;
     font-size: 1.7rem;
     color: var(--black);
 }

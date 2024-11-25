@@ -18,43 +18,46 @@
     <link rel="stylesheet" href="../css/style.css">    
     <link rel="stylesheet" href="../css/animals.css">
 </head>
-     <!-- header -->
-<body>
-     <header class="header">
+        <!-- header -->
+        <header>
+            <nav>
+                <a href="index.html" class="logo"> <i class="fas fa-paw"></i> zoo</a>
+            </nav>
 
-        <nav>
-            <a href="index.html" class="logo"> <i class="fas fa-paw"></i> zoo</a>
-        </nav>
+            <nav>
+                <a href="index.html">home</a>
+                <a href="animals.html">animal</a>
+                <a href="contact.html">contact</a>
+            </nav>
 
-        <nav class="navbar">
-            <a href="index.html">home</a>
-            <a href="animals.html">animal</a>
-            <a href="contact.html">contact</a>
-        </nav>
+            <div class="icons">
+                <a href="#login-form" class="fas fa-user"></a>
+            </div>
 
-        <div class="icons">
-            <div id="login-btn" class="fas fa-user"></div>
-        </div>
+            <div id="login-form" class="login-form">
+                <form action="">
+                    <h3>login form</h3>
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        class="box"
+                    />
+                    <input
+                        type="password"
+                        placeholder="Enter your password"
+                        class="box"
+                    />
+                    <div class="remember">
+                        <input type="checkbox" name="" id="remember-me" />
+                        <label for="remember-me">remember me</label>
+                    </div>
+                    <input href="#" type="submit" value="login" class="btn" >
+                    <a href="#" class="close-btn">&times;</a>       
+                </form>
+            </div>
+        </header>
 
-        <!-- login form -->
-
-    <form action="" class="login-form">
-
-        <h3>login form</h3>
-        
-        <input type="email" placeholder="Enter your email" class="box">
-        <input type="password" placeholder="Enter your password" class="box">
-        <div class="remember">
-            <input type="checkbox" name="" id="remember-me">
-            <label for="remember-me">remember me</label>
-        </div>
-        <a href="#" class="btn">login</a>
-
-    </form>
-
-    </header>
-
- <!-- Animals Section with Sliding Window -->
+ <!-- Gallery Section with Sliding Window -->
 <section class="animals-section">
     <h1 class="heading">GALLERY</h1>
     
@@ -105,6 +108,100 @@
      </div>
   </section>
 
+  
+<!-- Animal Section -->
+<section class="animals-section">
+    <h1 class="section-title">ANIMALS</h1>
+    <div class="animal-container">
+        <div class="animal-card">
+            <img src="../media/animal_1.jpg" alt="Cameleon" class="animal-photo">
+            <h3 class="animal-name">Cameleon</h3>
+            <a href="#" class="btn">See Details</a>
+        </div>
+        <div class="animal-card">
+            <img src="../media/animals_2.jpg" alt="Zebra" class="animal-photo">
+            <h3 class="animal-name">Zebra</h3>
+            <a href="#" class="btn">See Details</a>
+        </div>
+        <div class="animal-card">
+            <img src="../media/animals_3.jpg" alt="Giraffe" class="animal-photo">
+            <h3 class="animal-name">Giraffe</h3>
+            <a href="#" class="btn">See Details</a>
+        </div>
+        <div class="animal-card">
+            <img src="../media/animals_4.jpg" alt="Monkey" class="animal-photo">
+            <h3 class="animal-name">Monkey</h3>
+            <a href="#" class="btn">See Details</a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Zoo map section -->
+    <section class="zoo-map">
+        <h1 class="heading">ZOO MAP</h1>
+        <video controls autoplay class="zoo-map-video" >
+            <source src="../media/London_Zoo_Map.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Table and list of what this zoo contanis -->
+    <section id="zoo-info">
+        <div class="container">
+            <h2>What Our Zoo Offers</h2>
+    
+            <!-- Table -->
+            <table class="zoo-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Available</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Animals</td>
+                        <td>✅</td>
+                        <td>Over 150 species from all around the world.</td>
+                    </tr>
+                    <tr>
+                        <td>Safari Tours</td>
+                        <td>✅</td>
+                        <td>Guided safari rides in our wildlife area.</td>
+                    </tr>
+                    <tr>
+                        <td>Petting Zoo</td>
+                        <td>✅</td>
+                        <td>Hands-on experience with farm animals.</td>
+                    </tr>
+                    <tr>
+                        <td>Reptile House</td>
+                        <td>✅</td>
+                        <td>Discover snakes, lizards, and more!</td>
+                    </tr>
+                    <tr>
+                        <td>Aquarium</td>
+                        <td>❌</td>
+                        <td>Coming soon! Stay tuned for updates.</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <!-- List -->
+            <h3>Other Activities and Facilities:</h3>
+            <ul class="zoo-list">
+                <li>Food courts and restaurants</li>
+                <li>Playground for kids</li>
+                <li>Souvenir shops</li>
+                <li>Educational programs and workshops</li>
+                <li>Ample parking and easy accessibility</li>
+            </ul>
+        </div>
+    </section>
+    
+    
 
     <!-- Footer -->
     <footer class="blue darken-4 white-text center-align ">

@@ -5,13 +5,15 @@ section  {
     text-align: center;
 }
 
+
 .heading {
-    font-size: 3em;
-    margin-bottom: 30px;
+    font-size: 3.5em;
+    margin-bottom: 10px;
     color: #333;
     font-family: 'Arial', sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
+    text-align: center ;
 }
 
 /* Slider Styles */
@@ -164,10 +166,188 @@ section  {
 @media screen and (max-width: 15000px) {
     #slides {
         max-width: calc(100% - 140px);
-        margin: 0 auto;
+        margin: 0 auto;}
+}
+
+/* General styles for animal section */
+
+.section-title {
+    font-size: 3rem;
+    color: #333; /* Text color */
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Animal container grid */
+.animal-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increased min-width for wider cards */
+    gap: 0.5rem; /* Spacing between grid items */
+    justify-items: center;
+    padding: 1rem;
+}
+
+/* Animal card styles */
+.animal-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 60%;
+}
+
+.animal-card:hover {
+    transform: translateY(-10px); /* Slight hover effect */
+    background-color: #f79f5c; /* Light orange hover color */
+}
+
+/* Image styles */
+.animal-photo {
+    width: 100%;
+    height: 300px; /* Adjusted height for consistent aspect ratio */
+    object-fit: cover;
+    border-bottom: 2px solid #f79f5c; /* Adds a divider at the bottom of the image */
+}
+
+/* Animal name styles */
+.animal-name {
+    font-size: 2.4rem;
+    margin: 1rem 0;
+    color: #333;
+    font-weight: 700;
+}
+
+/* Button styles */
+.animal-card .btn {
+    display: inline-block;
+    padding: 1rem 2.5rem; /* Adjusted padding for balance */
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #ffffff;
+    background-color: #ff6e01; /* Bright orange button */
+    border-radius: 5px;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.animal-card .btn:hover {
+    background-color: #e65a00; /* Darker orange on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .animal-container {
+        grid-template-columns: 1fr; /* Stacks items on smaller screens */
     }
-    
-    #controls label {
-        margin: 0;
+    .animal-photo {
+        height: 250px; /* Adjusted height for smaller devices */
     }
 }
+
+/* video section  */
+.zoo-map {
+    text-align: center;
+    padding: 2rem;
+    background: #f9f9f9;
+}
+
+.zoo-map h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.zoo-map-video {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* syle for table and list */
+/* General Styles for the Section */
+#zoo-info {
+    padding: 3rem 7%;
+    background: #fdf3e3;
+    text-align: center;
+}
+
+#zoo-info h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+#zoo-info h3 {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    color: #333;
+}
+
+/* Table Styles */
+.zoo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 1.6rem;
+    box-shadow: var(--box-shadow);
+}
+
+.zoo-table thead {
+    background: #ff6e01;
+    color: white;
+}
+
+.zoo-table th,
+.zoo-table td {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.zoo-table tbody tr:nth-child(even) {
+    background: #ffe0c1;
+}
+
+.zoo-table tbody tr:nth-child(odd) {
+    background: #fff6e5;
+}
+
+.zoo-table td {
+    color: #333;
+}
+
+.zoo-table tbody tr:hover {
+    background: #ffd8a8;
+    transition: 0.3s ease-in-out;
+}
+
+/* List Styles */
+.zoo-list {
+    list-style-type: disc;
+    padding: 0;
+    margin: 2rem auto;
+    display: inline-block;
+    text-align: left;
+}
+
+.zoo-list li {
+    font-size: 1.7rem;
+    color: #333;
+    margin: 0.8rem 0;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.zoo-list li:before {
+    content: "✔";
+    color: #ff6e01;
+    font-weight: bold;
+    margin-right: 0.8rem;
+}
+
