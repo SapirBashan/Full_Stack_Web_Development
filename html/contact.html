@@ -3,63 +3,128 @@
 <!DOCTYPE html>
 
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Complete Responsive zoo website</title>
+        <!-- font awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Responsive zoo website</title>
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+        />
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-
-    <link rel="stylesheet" href="../css/style.css">    
-</head>
-     <!-- header -->
-<body>
-     <header class="header">
-
-        <nav>
-            <a href="index.html" class="logo"> <i class="fas fa-paw"></i> zoo</a>
-        </nav>
-
-        <nav class="navbar">
-            <a href="index.html">home</a>
-            <a href="animals.html">animal</a>
-            <a href="contact.html">contact</a>
-        </nav>
-
-        <div class="icons">
-            <div id="login-btn" class="fas fa-user"></div>
-        </div>
-
-        <!-- login form -->
-
-    <form action="" class="login-form">
-
-        <h3>login form</h3>
-        
-        <input type="email" placeholder="Enter your email" class="box">
-        <input type="password" placeholder="Enter your password" class="box">
-        <div class="remember">
-            <input type="checkbox" name="" id="remember-me">
-            <label for="remember-me">remember me</label>
-        </div>
-        <a href="#" class="btn">login</a>
-
-    </form>
-
-    </header>
-
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/contact.css">
+    </head>
+    <!-- header -->
     <body>
-        <div>this is the page that displays contacts</div>
+        <!-- header -->
+        <header>
+            <nav>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-paw"></i> zoo</a
+                >
+            </nav>
+
+            <nav>
+                <a href="index.html">home</a>
+                <a href="animals.html">animal</a>
+                <a href="contact.html">contact</a>
+            </nav>
+
+            <div class="icons">
+                <a href="#login-form" class="fas fa-user"></a>
+            </div>
+
+            <div id="login-form" class="login-form">
+                <form action="">
+                    <h3>login form</h3>
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        class="box"
+                    />
+                    <input
+                        type="password"
+                        placeholder="Enter your password"
+                        class="box"
+                    />
+                    <div class="remember">
+                        <input type="checkbox" name="" id="remember-me" />
+                        <label for="remember-me">remember me</label>
+                    </div>
+                    <input href="#" type="submit" value="login" class="btn" />
+                    <a href="#" class="close-btn">&times;</a>
+                </form>
+            </div>
+        </header>
+
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing">
+            <h2 class="title">Zoo Ticket Prices</h2>
+            <div class="pricing-container">
+                <div class="pricing-box">
+                    <h3>Adult Tickets</h3>
+                    <p class="price">$25.00</p>
+                    <ul>
+                        <li>Full access to zoo exhibits</li>
+                        <li>Free educational guide</li>
+                        <li>All-day entry</li>
+                    </ul>
+                </div>
+                <div class="pricing-box">
+                    <h3>Child Tickets (Ages 3-12)</h3>
+                    <p class="price">$15.00</p>
+                    <ul>
+                        <li>Full access to zoo exhibits</li>
+                        <li>Children's activity booklet</li>
+                        <li>Guided child-friendly tour</li>
+                    </ul>
+                </div>
+                <div class="pricing-box">
+                    <h3>Military Discount</h3>
+                    <p class="price">20% Off</p>
+                    <ul>
+                        <li>Discount for active and retired military</li>
+                        <li>Valid ID required</li>
+                        <li>Applies to adult and child tickets</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="contact-container">
+                <aside class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p>Have questions? We'd love to hear from you!</p>
+                    <div class="contact-details">
+                        <p>📞 Phone: (555) 123-4567</p>
+                        <p>📧 Email: info@zooadventure.com</p>
+                        <p>📍 Address: 123 Wildlife Lane, Nature City</p>
+                    </div>
+                </aside>
+                <form class="contact-form">
+                    <h3>Send us a message</h3>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" placeholder="Your Phone Number">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="blue darken-4 white-text center-align">
+            <h3>&copy; 2024 Zoo Website. Yair and Sapir.</h3>
+        </footer>
     </body>
-
-    <!-- Footer -->
-    <footer class="blue darken-4 white-text center-align ">
-        <h3>&copy; 2024 Zoo Website. Yair and Sapir.</h3>
-    </footer>
-</body>
-
 </html>

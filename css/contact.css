@@ -1,0 +1,135 @@
+/* Pricing Section Styles */
+.pricing {
+    padding: 4rem 7%;
+    background-color: #f9f9f9;
+}
+
+.pricing .title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--black);
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.pricing-box {
+    flex: 1;
+    background: var(--white);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.pricing-box:hover {
+    transform: scale(1.05);
+}
+
+.pricing-box h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--main);
+}
+
+.pricing-box .price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.pricing-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pricing-box ul li {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    color: #666;
+}
+
+/* Contact Section Styles */
+.contact {
+    padding: 4rem 7%;
+    background-color: #f4f4f4;
+}
+
+.contact-container {
+    display: flex;
+    gap: 3rem;
+    align-items: stretch;
+}
+
+.contact-info {
+    flex: 1;
+    background-color: var(--main);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-details {
+    margin-top: 1rem;
+}
+
+.contact-details p {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+}
+
+.contact-form textarea {
+    min-height: 15rem;
+    resize: vertical;
+}
+
+.contact-form .btn {
+    align-self: center;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pricing-container,
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: none;
+        width: 100%;
+    }
+}
