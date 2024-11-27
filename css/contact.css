@@ -118,6 +118,20 @@
 .contact-form .btn {
     align-self: center;
     margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: var(--white);
+    background: var(--main);
+    cursor: pointer;
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    transition: 0.2s linear;
+}
+
+.contact-form .btn:hover {
+    background: #e65c00;;
 }
 
 /* Responsive Design */
