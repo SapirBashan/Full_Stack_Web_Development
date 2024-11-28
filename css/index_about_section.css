@@ -1,3 +1,4 @@
+/* ---------------------------------------------------------------------------------------- */
 /* General Section Styling */
 .about {
     padding: 4rem 10%;
@@ -16,20 +17,20 @@
 
 /* Image Styling */
 .about .image {
-    flex: 1 1 40%; /* Adjusts to 40% of the width */
+    flex: 1 1 40%; 
     display: flex;
     justify-content: center;
 }
 
 .about .image img {
-    width: 100%; /* Ensures responsiveness */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 2rem; /* Adds rounded corners */
+    width: 100%; 
+    height: auto; 
+    border-radius: 2rem; 
 }
 
 /* Content Styling */
 .about .content {
-    flex: 1 1 50%; /* Takes up 50% of the width */
+    flex: 1 1 50%; 
 }
 
 .about .content .title {
@@ -56,7 +57,7 @@
 /* Icons Box Styling */
 .about .icons {
     text-align: center;
-    background: var(--footer); /* Footer color variable */
+    background: var(--footer); 
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: var(--box-shadow);
@@ -65,34 +66,34 @@
 
 .about .icons a {
     font-size: 3rem;
-    color: var(--main); /* Highlighted main color */
+    color: var(--main);
     margin-bottom: 1rem;
 }
 
 
 .about .icons h3 {
     font-size: 1.8rem;
-    color: var(--white); /* Icon text color */
+    color: var(--white); 
 }
 
 .about .icons:hover {
     transform: translateY(-1rem); /* Hover effect */
     box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.2);
-    /* cursor: pointer; */
 }
 
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .about .box-container {
-        flex-direction: column; /* Stacks elements vertically */
+        flex-direction: column; 
     }
 
     .about .content {
-        text-align: center; /* Centers text for smaller screens */
+        text-align: center; 
     }
 }
 
+/* ---------------------------------------------------------------------------------------- */
 /* styling for the video about the map */
 .video{
     display: flex;
@@ -101,6 +102,7 @@
     margin-top: 2rem;
 }
 
+/* ---------------------------------------------------------------------------------------- */
 /* Css for the information section */
 /* Styling the entire information section */
 .information {
@@ -179,3 +181,5 @@
         max-width: 80%;
     }
 }
+/* ---------------------------------------------------------------------------------------- */
+

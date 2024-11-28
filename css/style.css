@@ -34,6 +34,7 @@ body {
     background: var(--bg);
 }
 
+/* ---------------------------------------------------------------------------------------- */
 /* Header Styles */
 header {
     position: sticky;
@@ -84,6 +85,7 @@ header nav {
     gap: 1rem;
 }
 
+/* ---------------------------------------------------------------------------------------- */
 /* css for the login form */
 header .login-form {
     position: fixed;
@@ -163,7 +165,7 @@ header .login-form .btn {
     border-radius: 0.5rem;
 }
 
-
+/* ---------------------------------------------------------------------------------------- */
 /* Footer Styles */
 footer {
     background: var(--footer);
@@ -253,7 +255,7 @@ footer .credit span {
     }
 }
 
-
+/* ---------------------------------------------------------------------------------------- */
 /* add syling to the home page */
 .home {
     min-height: 90vh;
@@ -297,4 +299,13 @@ footer .credit span {
     margin-top: 2rem;
     margin-left: 3rem;
 }
+
+/* media for the home page background*/
+@media (max-width: 768px) {
+    .home .content h3 {
+        font-size: 3.5rem;
+    }
+}
+
+/* ---------------------------------------------------------------------------------------- */
 
