@@ -16,6 +16,7 @@ section  {
     text-align: center ;
 }
 
+/* ---------------------------------------------------------------------------------------- */
 /* Slider Styles */
 .slider {
     width: 70%;
@@ -168,6 +169,7 @@ section  {
         max-width: calc(100% - 140px);
         margin: 0 auto;}
 }
+/* ---------------------------------------------------------------------------------------- */
 
 /* General styles for animal section */
 
@@ -182,8 +184,8 @@ section  {
 /* Animal container grid */
 .animal-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increased min-width for wider cards */
-    gap: 0.5rem; /* Spacing between grid items */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 0.5rem; 
     justify-items: center;
     padding: 1rem;
 }
@@ -200,16 +202,16 @@ section  {
 }
 
 .animal-card:hover {
-    transform: translateY(-10px); /* Slight hover effect */
-    background-color: #f79f5c; /* Light orange hover color */
+    transform: translateY(-10px); 
+    background-color: #f79f5c; 
 }
 
 /* Image styles */
 .animal-photo {
     width: 100%;
-    height: 300px; /* Adjusted height for consistent aspect ratio */
+    height: 300px;
     object-fit: cover;
-    border-bottom: 2px solid #f79f5c; /* Adds a divider at the bottom of the image */
+    border-bottom: 2px solid #f79f5c;
 }
 
 /* Animal name styles */
@@ -223,11 +225,11 @@ section  {
 /* Button styles */
 .animal-card .btn {
     display: inline-block;
-    padding: 1rem 2.5rem; /* Adjusted padding for balance */
+    padding: 1rem 2.5rem;
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
     color: #ffffff;
-    background-color: #ff6e01; /* Bright orange button */
+    background-color: #ff6e01; 
     border-radius: 5px;
     text-transform: capitalize;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -235,17 +237,17 @@ section  {
 }
 
 .animal-card .btn:hover {
-    background-color: #e65a00; /* Darker orange on hover */
-    transform: scale(1.05); /* Slight zoom on hover */
+    background-color: #e65a00; 
+    transform: scale(1.05); 
 }
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     .animal-container {
-        grid-template-columns: 1fr; /* Stacks items on smaller screens */
+        grid-template-columns: 1fr; 
     }
     .animal-photo {
-        height: 250px; /* Adjusted height for smaller devices */
+        height: 250px; 
     }
 }
 

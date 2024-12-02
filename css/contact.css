@@ -69,10 +69,11 @@
 
 .contact-info {
     flex: 1;
-    background-color: var(--main);
+    background-color:#f9b056;
     color: var(--white);
     padding: 2rem;
     border-radius: 0.5rem;
+
 }
 
 .contact-info h2 {
