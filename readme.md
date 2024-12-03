@@ -4,7 +4,11 @@ This project is a static HTML and CSS-based website designed to showcase a zoo a
 
 ---
 
-<video controls src="20241203-1730-39.8424625.mp4" title="Title"></video>
+
+https://github.com/user-attachments/assets/76dfc318-f7fd-409e-a657-6ebebe16122b
+
+
+
 
 ## Code Overview
 
