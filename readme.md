@@ -1,7 +1,9 @@
 # Zoo Website
 
 This project is a static HTML and CSS-based website designed to showcase a zoo and its offerings. The website is user-friendly and visually appealing, with a strong focus on layout, interactivity, and responsiveness.
-
+---
+# Link to the website
+## https://zoo-fswd.netlify.app
 ---
 
 
