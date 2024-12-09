@@ -77,8 +77,9 @@ https://github.com/user-attachments/assets/76dfc318-f7fd-409e-a657-6ebebe16122b
 1. Place all files in a project directory with the following structure:
    ```plaintext
    ├── index.html
-   ├── animals.html
-   ├── contact.html
+   ├── html/
+   │   ├── animals.html
+   │   ├──  contact.html
    ├── css/
    │   ├── style.css
    │   ├── animals.css
