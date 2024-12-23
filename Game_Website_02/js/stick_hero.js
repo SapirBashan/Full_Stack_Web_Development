@@ -35,10 +35,10 @@
   // The background moves slower than the hero
   const backgroundSpeedMultiplier = 0.2;
   
-  const hill1BaseHeight = 100;
+  const hill1BaseHeight = 130;
   const hill1Amplitude = 10;
   const hill1Stretch = 1;
-  const hill2BaseHeight = 70;
+  const hill2BaseHeight = 100;
   const hill2Amplitude = 20;
   const hill2Stretch = 0.5;
   
@@ -55,13 +55,18 @@
   const canvas = document.getElementById("game");
   canvas.width = window.innerWidth; // Make the Canvas full screen
   canvas.height = window.innerHeight;
+
+  let drawHero = drawHero1;
   
   const ctx = canvas.getContext("2d");
   
   const introductionElement = document.getElementById("introduction");
   const perfectElement = document.getElementById("perfect");
-  const restartButton = document.getElementById("restart");
+  const heroButton1 = document.getElementById("hero1");
+  const heroButton2 = document.getElementById("hero2");
   const scoreElement = document.getElementById("score");
+
+  
 
   
   // --------------------------- Game logic -------------------------------------
@@ -79,7 +84,8 @@
 
     introductionElement.style.opacity = 1;
     perfectElement.style.opacity = 0;
-    restartButton.style.display = "none";
+    heroButton1.style.display = "none";
+    heroButton2.style.display = "none";
     scoreElement.innerText = score;
   
     // The first platform is always the same
@@ -104,6 +110,7 @@
   
   
   function generatePlatform() {
+
     const minimumGap = 40;
     const maximumGap = 200;
     const minimumWidth = 20;
@@ -255,7 +262,8 @@
         const maxHeroY =
           platformHeight + 100 + (window.innerHeight - canvasHeight) / 2;
         if (heroY > maxHeroY) {
-          restartButton.style.display = "block";
+          heroButton1.style.display = "block";
+          heroButton2.style.display = "block";
           return;
         }
         turningSpeed = 4;
@@ -296,10 +304,18 @@
     return [platformTheStickHits, false];
   }
 
-   restartButton.addEventListener("click", function (event) {
+  heroButton1.addEventListener("click", function (event) {
     event.preventDefault();
+    drawHero = drawHero1;
     resetGame();
-    restartButton.style.display = "none";
+    heroButton1.style.display = "none";
+  });
+
+  heroButton2.addEventListener("click", function (event) {
+    event.preventDefault();
+    drawHero = drawHero2;
+    resetGame();
+    heroButton2.style.display = "none";
   });
 
 
@@ -318,8 +334,11 @@
   
     // Draw scene
     drawPlatforms();
-    drawHero1();
-    //drawHero2();
+    if (drawHero == drawHero1) {
+      drawHero1();
+    } else if (drawHero == drawHero2) {
+      drawHero2();
+    }
     drawSticks();
   
     // Restore transformation
@@ -486,7 +505,7 @@
     // Draw sky
     var gradient = ctx.createLinearGradient(0, 0, 0, window.innerHeight);
     gradient.addColorStop(0, "#76D5FE");
-    gradient.addColorStop(1, "#B1E7FF");
+    gradient.addColorStop(1, "#ECF9FF");
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
   

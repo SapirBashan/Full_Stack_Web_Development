@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ninja Icon Generator</title>
+</head>
+<body>
+  <h1>Ninja Icon Generator</h1>
+  <canvas id="heroCanvas" width="100" height="100" style="display: none;"></canvas>
+  <button id="downloadIcon">Download Ninja Icon</button>
+  <div>
+    <h2>Preview:</h2>
+    <img id="heroPreview" alt="Ninja Icon Preview">
+  </div>
+
+  <script>
+    // Function to draw a rounded rectangle
+    function drawRoundedRect(ctx, x, y, width, height, radius) {
+      if (ctx.beginPath) {
+        ctx.beginPath();
+        ctx.moveTo(x + radius, y);
+        ctx.lineTo(x + width - radius, y);
+        ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+        ctx.lineTo(x + width, y + height - radius);
+        ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+        ctx.lineTo(x + radius, y + height);
+        ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+        ctx.lineTo(x, y + radius);
+        ctx.quadraticCurveTo(x, y, x + radius, y);
+        ctx.closePath();
+        ctx.fill();
+      }
+    }
+
+    // Function to draw the ninja hero
+    function drawNinja(ctx, ninjaX, ninjaY, ninjaWidth, ninjaHeight) {
+      ctx.save();
+      ctx.fillStyle = "#2C3E50"; // Ninja body color (black)
+      const canvasHeight = ctx.canvas.height; // Get the height of the canvas
+      ctx.translate(
+        ninjaX - ninjaWidth / 2,
+        ninjaY + canvasHeight - 50 - ninjaHeight / 2
+      );
+
+      // Ninja Body
+      drawRoundedRect(ctx, -ninjaWidth / 2, -ninjaHeight / 2, ninjaWidth, ninjaHeight - 5, 8);
+
+      // Ninja Legs (cylindrical)
+      ctx.fillStyle = "#34495E"; // Dark legs color
+      ctx.fillRect(-6, 15, 4, 10); // Left leg
+      ctx.fillRect(2, 15, 4, 10);  // Right leg
+
+      // Ninja Feet
+      ctx.fillStyle = "#34495E";
+      ctx.fillRect(-8, 25, 6, 3); // Left foot
+      ctx.fillRect(2, 25, 6, 3);  // Right foot
+
+      // Ninja Eyes (white for stealthy look)
+      ctx.beginPath();
+      ctx.fillStyle = "#ECF0F1"; // White eyes
+      ctx.arc(-5, -7, 3, 0, Math.PI * 2, false);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(5, -7, 3, 0, Math.PI * 2, false);
+      ctx.fill();
+
+      // Ninja Headband (with a symbol)
+      ctx.fillStyle = "#D35400"; // Orange headband color
+      ctx.fillRect(-ninjaWidth / 2 - 3, -ninjaHeight / 2 - 5, ninjaWidth + 6, 5); // Headband base
+
+      // Ninja Katana Swords (one in each hand)
+      ctx.strokeStyle = "#BDC3C7"; // Katana color (silver)
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(-ninjaWidth / 2 - 3, 0); // Left katana (horizontal)
+      ctx.lineTo(-ninjaWidth / 2 - 10, 10);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(ninjaWidth / 2 + 3, 0); // Right katana (horizontal)
+      ctx.lineTo(ninjaWidth / 2 + 10, 10);
+      ctx.stroke();
+
+      // Ninja Arms (holding swords)
+      ctx.fillStyle = "#2C3E50"; // Ninja arms color (black)
+      ctx.fillRect(-ninjaWidth / 2 - 5, -10, 5, 15); // Left arm
+      ctx.fillRect(ninjaWidth / 2, -10, 5, 15); // Right arm
+
+      // Ninja Chest Plate
+      ctx.fillStyle = "#34495E";
+      ctx.fillRect(-ninjaWidth / 4, -4, ninjaWidth / 2, 8);
+
+      ctx.restore();
+    }
+
+    // Get the canvas and context
+    const canvas = document.getElementById("heroCanvas");
+    const ctx = canvas.getContext("2d");
+
+    if (ctx) { // Check if ctx is valid
+      // Ninja properties
+      const ninjaX = 50; // Center of the canvas
+      const ninjaY = 50;
+      const ninjaWidth = 20;
+      const ninjaHeight = 30;
+
+      // Draw the ninja
+      drawNinja(ctx, ninjaX, ninjaY, ninjaWidth, ninjaHeight);
+
+      // Convert canvas to image
+      const ninjaImage = canvas.toDataURL("image/png");
+
+      // Display the preview
+      const heroPreview = document.getElementById("heroPreview");
+      heroPreview.src = ninjaImage;
+
+      // Add download functionality
+      const downloadButton = document.getElementById("downloadIcon");
+      downloadButton.addEventListener("click", () => {
+        const link = document.createElement("a");
+        link.download = "ninja-icon.png";
+        link.href = ninjaImage;
+        link.click();
+      });
+    } else {
+      console.error("Failed to get canvas 2D context.");
+    }
+  </script>
+</body>
+</html>
