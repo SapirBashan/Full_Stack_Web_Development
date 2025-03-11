@@ -2,3 +2,7 @@
 [submodule "FSWD_Games_2"]
     path = FSWD_Games_2
     url = https://github.com/SapirBashan/FSWD_Games_2
+
+[submodule "FSWD_WorkOutWebsite_3"]
+    path = FSWD_WorkOutWebsite_3
+    url = https://github.com/Ori-Shoshana/FSDW-3
