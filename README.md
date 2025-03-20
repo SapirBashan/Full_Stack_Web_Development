@@ -30,5 +30,5 @@ https://github.com/user-attachments/assets/c06aa3ca-0cff-4170-9f39-00be884b7dbf
 
 ## First project me and [Ori_Shoshana]([https://github.com/yuyefet](https://github.com/Ori-Shoshana)) Created a full gane workout manegment website user based.
 ## CODE - [ Workout_Website ](https://github.com/Ori-Shoshana/FSDW-3)
-## Website - [game-sphere-fswd.netlify.app](https://game-sphere-fswd.netlify.app](https://thunderous-lolly-1fc835.netlify.app/))
+## Website - [game-sphere-fswd.netlify.app](https://thunderous-lolly-1fc835.netlify.app)
 ---
